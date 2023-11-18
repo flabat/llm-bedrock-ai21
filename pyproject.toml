@@ -1,0 +1,25 @@
+[project]
+name = "llm-bedrock-ai21"
+version = "0.1"
+
+description = "LLM plugin for AI21 Jurassic 2 on AWS Bedrock"
+readme = "README.md"
+authors = [{name = "Fabian Labat"}]
+license = {text = "Apache-2.0"}
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+
+dependencies = [
+    "llm",
+    "boto3 >= 1.28.60",
+]
+
+[project.urls]
+Homepage = "https://github.com/flabat/llm-bedrock-ai21"
+
+[project.entry-points.llm]
+bedrock_llama = "llm_bedrock_ai21"
+
+[project.optional-dependencies]
+test = ["pytest"]
